@@ -1,0 +1,25 @@
+# This is a rolling dize game that continues asking for input until the person responds n/N
+# we lower case the response so we can check if it's equal to (y/n) only.
+# if equal to y then it returns 2 random numbers between 1 - 6
+# if no says "Thanks for playing"
+# if invalid input it continues in the loop
+
+import random
+
+# loop
+while True:
+    # first a question Y/N if to roll the dice
+    choice = input("Do you want to roll the dice: (y/n)\n").lower()
+    # once the asnwer is correct two random numbers appear from 1 to 6 until the user types n/N
+    if choice == "y":
+        die1 = random.randint(1, 6)
+        die2 = random.randint(1, 6)
+        print(f"{die1}, {die2}")
+
+    elif choice == "n":
+        print("Thanks for playing!")
+        break
+
+    # if the answer is anything but y/n then keep on asking
+    else:
+        print("Invalid choice")
