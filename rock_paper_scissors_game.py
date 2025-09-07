@@ -2,10 +2,10 @@
 # his input and the computer, the options are presented with emojis.
 import random
 
-# set up 3 values (rock, paper, scissors)
-choices = ("r", "p", "s")
 # emojis dictionary
 emojis = {"r": "🪨", "p": "📜", "s": "✂"}
+# get the values from the dictionary into a tuple
+choices = tuple(emojis.keys())
 
 
 def get_user_choices():
