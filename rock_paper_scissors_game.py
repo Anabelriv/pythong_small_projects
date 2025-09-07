@@ -2,8 +2,12 @@
 # his input and the computer, the options are presented with emojis.
 import random
 
+# constants
+ROCK = "r"
+PAPER = "p"
+SCISSORS = "s"
 # emojis dictionary
-emojis = {"r": "🪨", "p": "📜", "s": "✂"}
+emojis = {ROCK: "🪨", PAPER: "📜", SCISSORS: "✂"}
 # get the values from the dictionary into a tuple
 choices = tuple(emojis.keys())
 
@@ -29,9 +33,9 @@ def determine_winner(user_choice, pc_choice):
     if user_choice == pc_choice:
         print("It's a draw!")
     elif (
-        (user_choice == "r" and pc_choice == "s")
-        or (user_choice == "p" and pc_choice == "r")
-        or (user_choice == "s" and pc_choice == "p")
+        (user_choice == ROCK and pc_choice == SCISSORS)
+        or (user_choice == PAPER and pc_choice == ROCK)
+        or (user_choice == SCISSORS and pc_choice == PAPER)
     ):
         print("You win!")
     else:
@@ -60,3 +64,4 @@ def play_game():
 
 
 play_game()
+
